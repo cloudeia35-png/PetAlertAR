@@ -1,0 +1,147 @@
+<!--
+  ETAPA 2 - PASO 4 (src/mascotas/saludo.js): elegir como rastrear a cada mascota.
+    op-dog-placa / op-dog-gps / op-dog-chip     opciones de Cacao
+    op-cat-chip / op-cat-placa / op-cat-ble     opciones de Nube
+    ok-...  icono Check de cada opcion (oculto hasta elegirla)
+    rx-continuar  boton CONTINUAR (oculto hasta elegir las dos)
+-->
+<style>
+  @font-face {
+    font-family: Barlow;
+    src: url(../fonts/Barlow_400Regular.ttf);
+  }
+
+  @font-face {
+    font-family: Barlow;
+    src: url(../fonts/Barlow_700Bold.ttf);
+    font-weight: bold;
+  }
+
+  @font-face {
+    font-family: VarelaRound;
+    src: url(../fonts/VarelaRound_400Regular.ttf);
+  }
+
+  .card {
+    flex-direction: column;
+    width: 720px;
+    padding-top: 28px;
+    padding-left: 32px;
+    padding-right: 32px;
+    padding-bottom: 26px;
+    gap: 14px;
+    border-radius: 30px;
+    border-width: 3px;
+    border-color: #ffffff;
+    background-color: #dcebfb;
+    font-family: Barlow;
+  }
+
+  .num {
+    color: #ff7a66;
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 1.2px;
+  }
+
+  .title {
+    font-family: VarelaRound;
+    color: #14305e;
+    font-size: 30px;
+    line-height: 36px;
+  }
+
+  .cols {
+    flex-direction: row;
+    gap: 18px;
+  }
+
+  .pet {
+    flex-direction: column;
+    width: 319px;
+    gap: 10px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-left: 16px;
+    padding-right: 16px;
+    border-radius: 22px;
+    background-color: #ffffff;
+  }
+
+  .pet-name {
+    font-family: VarelaRound;
+    color: #14305e;
+    font-size: 24px;
+  }
+
+  .opt {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    padding-left: 18px;
+    padding-right: 14px;
+    border-radius: 18px;
+    background-color: #eef4fc;
+    border-width: 2px;
+    border-color: #c4d6ee;
+    cursor: pointer;
+  }
+
+  .opt:hover {
+    background-color: #d6e6fa;
+  }
+
+  .opt-text {
+    color: #14305e;
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  .btn {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 6px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    border-radius: 32px;
+    background-color: #14305e;
+    cursor: pointer;
+  }
+
+  .btn:hover {
+    background-color: #24508f;
+  }
+
+  .btn-label {
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 1.4px;
+  }
+</style>
+<div class="card">
+  <span class="num">ETAPA 2 · RASTREO</span>
+  <span class="title">¿Cómo vas a rastrear a cada mascota?</span>
+  <div class="cols">
+    <div class="pet">
+      <span class="pet-name">Cacao (perro)</span>
+      <div id="op-dog-placa" class="opt"><span class="opt-text">Placa con nombre</span><Check id="ok-dog-placa" width="24" height="24" color="#ffffff" style="display: none"></Check></div>
+      <div id="op-dog-gps" class="opt"><span class="opt-text">Collar con GPS</span><Check id="ok-dog-gps" width="24" height="24" color="#ffffff" style="display: none"></Check></div>
+      <div id="op-dog-chip" class="opt"><span class="opt-text">Microchip</span><Check id="ok-dog-chip" width="24" height="24" color="#ffffff" style="display: none"></Check></div>
+    </div>
+    <div class="pet">
+      <span class="pet-name">Nube (gata)</span>
+      <div id="op-cat-chip" class="opt"><span class="opt-text">Microchip</span><Check id="ok-cat-chip" width="24" height="24" color="#ffffff" style="display: none"></Check></div>
+      <div id="op-cat-placa" class="opt"><span class="opt-text">Placa con nombre</span><Check id="ok-cat-placa" width="24" height="24" color="#ffffff" style="display: none"></Check></div>
+      <div id="op-cat-ble" class="opt"><span class="opt-text">Rastreador Bluetooth</span><Check id="ok-cat-ble" width="24" height="24" color="#ffffff" style="display: none"></Check></div>
+    </div>
+  </div>
+  <div id="rx-continuar" class="btn" style="display: none">
+    <span class="btn-label">CONTINUAR</span>
+    <ArrowRight width="22" height="22" color="#ffffff"></ArrowRight>
+  </div>
+</div>

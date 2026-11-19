@@ -229,6 +229,26 @@
       }
     },
     {
+      "components": {
+        "RayInteractable": {},
+        "PokeInteractable": {}
+      },
+      "content": {
+        "asset": "rastreo-elegir-panel",
+        "type": "asset"
+      },
+      "id": "rastreo-elegir-panel",
+      "name": "Elegir rastreo",
+      "transform": {
+        "position": [
+          0,
+          -10,
+          0
+        ],
+        "scale": 0.16
+      }
+    },
+    {
       "content": {
         "asset": "hint-panel",
         "type": "asset"
