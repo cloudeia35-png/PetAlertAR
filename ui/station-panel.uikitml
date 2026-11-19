@@ -4,7 +4,8 @@
     st-step   "ESTACION 1 DE 1"     st-title  nombre de la estacion     st-text  instruccion breve
     btn-move  volver a colocar la estacion     btn-next  pasar a la siguiente (btn-next-label: "Siguiente" / "Terminar")
     btn-skip  SOLO EN DESARROLLO (npm run dev): guarda todo el kit de una vez para probar lo que sigue
-  El nodo de la escena lleva PokeInteractable y RayInteractable. Iconos Lucide: Move, ArrowRight.
+    btn-reset "Reiniciar": solo en la estacion del kit; devuelve a su lugar los objetos que no se guardaron
+  El nodo de la escena lleva PokeInteractable y RayInteractable. Iconos Lucide: Move, ArrowRight, RotateCcw.
 -->
 <style>
   @font-face {
@@ -113,6 +114,10 @@
     <div id="btn-move" class="btn ghost">
       <Move width="20" height="20" color="#14305e"></Move>
       <span id="btn-move-label" class="ghost-label">Mover</span>
+    </div>
+    <div id="btn-reset" class="btn ghost" style="display: none">
+      <RotateCcw width="20" height="20" color="#14305e"></RotateCcw>
+      <span class="ghost-label">Reiniciar</span>
     </div>
     <div id="btn-skip" class="btn ghost" style="display: none">
       <span class="ghost-label">Saltar</span>

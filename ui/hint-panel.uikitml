@@ -5,6 +5,7 @@
     msg-scan    el visor no tiene la sala escaneada (Space Setup)
     msg-blocked el lugar mirado choca con una pared o un mueble real (blocked-sub cambia segun el motivo)
     msg-station colocar una estacion (station-title cambia)   msg-station-ok  la estacion cabe: pellizcar para fijarla
+    msg-recon   "Reconociendo tu espacio": recon-suelo / recon-mesa (✔ o …), recon-hint (que mirar)
   Fuentes Barlow / Varela Round con tildes (ver src/fonts.js). Iconos Lucide: ScanSearch, Check, ChevronsDown, Heart,
   ScanLine, TriangleAlert.
 -->
@@ -80,6 +81,18 @@
   }
 </style>
 <div class="panel-root">
+  <div id="msg-recon" class="msg" style="display: none">
+    <div class="badge">
+      <div id="recon-icon-scan"><ScanSearch width="36" height="36" color="#ffffff"></ScanSearch></div>
+      <div id="recon-icon-ok" style="display: none"><Check width="36" height="36" color="#ffffff"></Check></div>
+    </div>
+    <div class="text">
+      <span id="recon-title" class="title">Reconociendo tu espacio</span>
+      <span id="recon-suelo" class="sub">… Buscando el suelo</span>
+      <span id="recon-mesa" class="sub">… Buscando una mesa</span>
+      <span id="recon-hint" class="sub">Mira hacia el piso y recorre la sala con la vista.</span>
+    </div>
+  </div>
   <div id="msg-search" class="msg">
     <div class="badge"><ScanSearch width="36" height="36" color="#ffffff"></ScanSearch></div>
     <div class="text">
